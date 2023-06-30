@@ -61,7 +61,7 @@ The context doesn't have to be limited to just these points. Depending on the sp
 
 A detailed example context has been provided in the `main.py` file to give you an idea of how you can tailor the context to suit the specific needs of your organisation.
 
-Please note, it should be self-explanatory that you'll need to replace '***' in the context with the relevant information from the organisation you are designing this solution for.
+Please note, it should be self-explanatory that you'll need to replace '***' in the sample context I have provided with the relevant information from the organisation you are designing this solution for.
  
 ```
    context = """
