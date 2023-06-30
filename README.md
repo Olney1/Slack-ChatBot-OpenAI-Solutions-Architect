@@ -94,41 +94,40 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
    Go to your app settings page on the Slack API site and navigate to 'Event Subscriptions'. Enable events, then paste the ngrok URL in the 'Request URL' box. Append `/slack/events` to the end of this URL.
 
 
-Testing
+## Testing
+
 In order to test the application, you need to mimic a real user interaction. This is done by sending a POST request to the /slack/events endpoint with a JSON body representing a Slack event. The application should then respond by posting a message in the designated Slack channel with the tech support response.
 
-Here are the step-by-step instructions:
+**Here are the step-by-step instructions:**
 
-Add the Bot to a Private Channel
+**Add the Bot to a Private Channel**
 
 First, you need to invite the bot to a private channel in your Slack workspace. You can create a new private channel for testing purposes. To invite the bot to the channel:
 
-Go to the channel where you want to add the bot.
-Click on the 'Details' icon at the top right.
-Click 'More' and then 'Add apps'.
-Search for your bot's name and click 'Add'.
-The bot should now be a member of the channel.
+1. Go to the channel where you want to add the bot.
+2. Click on the 'Details' icon at the top right.
+3. Click 'More' and then 'Add apps'.
+4. Search for your bot's name and click 'Add'.
+5. The bot should now be a member of the channel.
 
-Assign Necessary Permissions in the Slack Dashboard
+**Assign Necessary Permissions in the Slack Dashboard**
 
 In order for the bot to function properly, you need to assign necessary permissions via the Slack dashboard. These permissions include the ability to post messages, view channel details, and receive event notifications.
 
-Go to your app settings page on the Slack API site.
-Navigate to 'OAuth & Permissions'.
-Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
-Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include app_mentions:read, channels:history, channels:join, channels:read, channels:write, chat:write, chat:write.public, commands, groups:read, im:history, im:read, im:write, mpim:history, mpim:read, mpim:write, users.profile:read, users:read, and users:write.
-Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history, post messages, and react to mentions.
+1. Go to your app settings page on the Slack API site.
+2. Navigate to 'OAuth & Permissions'.
+3. Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
+4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include app_mentions:read, channels:history, channels:join, channels:read, channels:write, chat:write, chat:write.public, commands, groups:read, im:history, im:read, im:write, mpim:history, mpim:read, mpim:write, users.profile:read, users:read, and users:write.
+5. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history, post messages, and react to mentions.
 
-Send a POST request
+**Send a POST request**
 
 With the bot set up in your private channel and permissions granted, you can now test the application by sending a POST request to the /slack/events endpoint. You can use tools like Postman to easily send POST requests.
 
 The body of the request should contain a JSON object representing a Slack event. This should mimic the format of the event objects that Slack sends to your bot. You can refer to the Slack API documentation for examples of these event objects.
 
-For example, a message event might look like this:
+**For example, a message event might look like this:**
 
-json
-Copy code
 `{
     "token": "YOUR_SLACK_VERIFICATION_TOKEN",
     "team_id": "T061EG9RZ",
@@ -145,6 +144,7 @@ Copy code
     "event_time": 1558977266,
     "authed_users": ["U0FFV41K"]
 }`
+
 Remember to replace the placeholders (YOUR_SLACK_VERIFICATION_TOKEN, YOUR_CHANNEL_ID, YOUR_USER_ID) with actual values.
 
 After sending the request, check the private channel in Slack. The bot should respond with a tech support message.
