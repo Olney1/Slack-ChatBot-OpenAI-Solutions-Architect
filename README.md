@@ -80,9 +80,7 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
 
 2. **Expose your local server to the internet with ngrok**
 
-   In a new terminal window, navigate to the directory where ngrok is installed and start a tunnel on the same port
-
- as the FastAPI application (default is 8000).
+   In a new terminal window, navigate to the directory where ngrok is installed and start a tunnel on the same port as the FastAPI application (default is 8000).
 
    ```
    ./ngrok http 8000
