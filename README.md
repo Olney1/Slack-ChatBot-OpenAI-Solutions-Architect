@@ -121,7 +121,7 @@ By changing the context, the same chatbot architecture can be applied to virtual
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## IMPORTANT LEGAL AND PRIVACY NOTES
+## IMPORTANT INFO AND PRIVACY NOTES
 
 Please note that this is not production ready code. It is for testing solutions via localhost, development and demonstration purposes only.
 
