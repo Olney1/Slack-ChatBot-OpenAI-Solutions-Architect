@@ -1,5 +1,3 @@
-Sure, here's your updated README:
-
 # Slack ChatBot Tech-Support - OpenAI Solutions Architect
 
 This repository demonstrates a powerful application for OpenAI's GPT-3 model, tailored to meet the needs of solutions architects. The application uses a chatbot that is designed to provide tech support within an organization. 
