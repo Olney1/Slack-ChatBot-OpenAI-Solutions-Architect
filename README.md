@@ -96,9 +96,7 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
 
 ## Testing
 
-In order to test the application, you need to mimic a real user interaction. This is done by sending a POST request to the /slack/events endpoint with a JSON body representing a Slack event. The application should then respond by posting a message in the designated Slack channel with the tech support response.
-
-**Here are the step-by-step instructions:**
+In order to test the application, you need to mimic a real user interaction. This is done by sending a POST request to the `/slack/events` endpoint with a JSON body representing a Slack event. The application should then respond by posting a message in the designated Slack channel with the tech support response.
 
 **Add the Bot to a Private Channel**
 
@@ -128,7 +126,7 @@ The body of the request should contain a JSON object representing a Slack event.
 
 **For example, a message event might look like this:**
 
-`{
+```{
     "token": "YOUR_SLACK_VERIFICATION_TOKEN",
     "team_id": "T061EG9RZ",
     "api_app_id": "A0FFV41KK",
@@ -143,7 +141,7 @@ The body of the request should contain a JSON object representing a Slack event.
     "event_id": "Ev0FFV41KK",
     "event_time": 1558977266,
     "authed_users": ["U0FFV41K"]
-}`
+}```
 
 Remember to replace the placeholders (YOUR_SLACK_VERIFICATION_TOKEN, YOUR_CHANNEL_ID, YOUR_USER_ID) with actual values.
 
