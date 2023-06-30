@@ -99,7 +99,7 @@ You can send a POST request to the `/slack/events` endpoint with a JSON body rep
 
 ## Customising the Chatbot
 
-The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group. It does not have to be designed for solving company specific IT issues or replacing an IT support team. The context that the chatbot uses to generate responses can be defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses Slack in this instance.
+The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group. It does not have to be designed for solving company specific IT issues or replacing an IT support team. The context that the chatbot uses to generate responses can be defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses the Slack messaging platform (in this instance).
 
 **For example:**
 
