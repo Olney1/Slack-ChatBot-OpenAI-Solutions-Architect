@@ -123,6 +123,8 @@ By changing the context, the same chatbot architecture can be applied to virtual
 
 ## IMPORTANT LEGAL AND PRIVACY NOTES
 
+Please note that this is not production ready code. It is for testing solutions via localhost, development and demonstration purposes only.
+
 There are a few potential privacy issues that can be identified in the provided code:
 
 **Logging of Slack events:** The code includes logging statements that log the received Slack events, including the event data. Depending on the logging configuration, this could potentially expose sensitive information contained in the events, such as user messages or other personally identifiable information (PII). It is important to ensure that the logging is properly configured to prevent the exposure of sensitive data in production environments.
