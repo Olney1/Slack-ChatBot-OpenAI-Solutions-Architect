@@ -141,7 +141,8 @@ The body of the request should contain a JSON object representing a Slack event.
     "event_id": "Ev0FFV41KK",
     "event_time": 1558977266,
     "authed_users": ["U0FFV41K"]
-}```
+}
+```
 
 Remember to replace the placeholders (YOUR_SLACK_VERIFICATION_TOKEN, YOUR_CHANNEL_ID, YOUR_USER_ID) with actual values.
 
