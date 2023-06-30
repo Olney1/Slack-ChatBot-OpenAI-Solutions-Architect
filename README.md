@@ -126,7 +126,8 @@ The body of the request should contain a JSON object representing a Slack event.
 
 **For example, a message event might look like this:**
 
-```{
+```
+{
     "token": "YOUR_SLACK_VERIFICATION_TOKEN",
     "team_id": "T061EG9RZ",
     "api_app_id": "A0FFV41KK",
