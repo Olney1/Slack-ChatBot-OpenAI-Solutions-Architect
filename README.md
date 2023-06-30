@@ -115,9 +115,8 @@ In order for the bot to function properly, you need to assign necessary permissi
 1. Go to your app settings page on the Slack API site.
 2. Navigate to 'OAuth & Permissions'.
 3. Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
-4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include chat:write and groups:history.
-5. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
-6. Go to 'Events Subscriptions' and then navigate to 'Subscribe to bot events'. Add the message.groups bot user event.
+4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include chat:write and groups:history. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
+5. Go to 'Events Subscriptions' and then navigate to 'Subscribe to bot events'. Add the message.groups bot user event.
 
 **Send a POST request**
 
