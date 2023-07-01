@@ -45,9 +45,13 @@ You will also need the following API keys and secrets, which should be stored se
    pip install -r requirements.txt
    ```
 
-5. **Add your context in main.py**
+## Context
 
-The context sets the scope and behaviour of the chatbot by providing essential information about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
+This is where the bot can be customised for any company use case.
+
+**Add your context in main.py**
+
+In this application instance, the context sets the scope and behaviour of the chatbot by providing essential information about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
 
 **Key information examples for your own context:**
 
