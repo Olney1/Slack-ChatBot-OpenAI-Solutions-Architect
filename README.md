@@ -47,11 +47,11 @@ You will also need the following API keys and secrets, which should be stored se
 
 ## Context
 
-This is where the bot can be customised for any company use case.
+This is where the bot can be customised for any company use case, not just a tech support chatbot.
 
 **Add your context in main.py**
 
-In this application instance, the context sets the scope and behaviour of the chatbot by providing essential information about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
+The context sets the scope and behaviour of the chatbot by providing essential information, in this particular instance, about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
 
 **Key information examples for your own context:**
 
@@ -155,7 +155,7 @@ After sending the request, check the private channel in Slack. The bot should re
 
 ## Customising the Chatbot
 
-The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group. It does not have to be designed for solving company specific IT issues or replacing an IT support team. The context that the chatbot uses to generate responses can be defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses the Slack messaging platform (in this instance).
+The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group by editing the context variable as detailed above. It does not have to be designed for solving company specific IT issues. The context that the chatbot uses to generate responses can be heavily defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses the Slack messaging platform (in this instance).
 
 **For example:**
 
