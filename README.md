@@ -30,7 +30,6 @@ You will also need the following API keys and secrets, which should be stored se
 
    ```
    cd Slack-ChatBot-OpenAI-Solutions-Architect
-
    ```
 
 3. **Create a virtual environment (optional)**
