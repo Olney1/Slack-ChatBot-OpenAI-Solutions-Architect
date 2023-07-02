@@ -23,13 +23,14 @@ You will also need the following API keys and secrets, which should be stored se
 1. **Clone the repository**
 
    ```
-   git clone https://github.com/Olney1/Slack-ChatBot-Tech-Support---OpenAI---Solutions-Architect.git
+   git clone https://github.com/Olney1/Slack-ChatBot-OpenAI-Solutions-Architect
    ```
 
 2. **Navigate into the directory**
 
    ```
-   cd Slack-ChatBot-Tech-Support---OpenAI---Solutions-Architect
+   cd Slack-ChatBot-OpenAI-Solutions-Architect
+
    ```
 
 3. **Create a virtual environment (optional)**
