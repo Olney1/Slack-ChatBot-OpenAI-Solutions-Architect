@@ -1,6 +1,6 @@
 # Slack ChatBot OpenAI Solutions Architect
 
-This repository demonstrates a powerful application for OpenAI's GPT-3 model, tailored to meet the needs of solutions architects. This specific application uses a chatbot designed to provide tech support within an organization. However, if you read on, you can see how to customize the bot with specific context for your own organization's use case.
+This repository demonstrates a powerful application for OpenAI's GPT-3 model, tailored to meet the needs of solutions architects. This specific application uses a chatbot designed to provide tech support within an organisation. However, if you read on, you can see how to customise the bot with specific context for your own organisation's use case.
 
 Based on a context defined by the architect, for example, the chatbot is capable of diagnosing and troubleshooting a wide range of software and hardware issues, interacting with specific systems or applications, and providing detailed instructions to users. The responses are specifically tailored to the organisation's IT use case. The application is built with FastAPI, a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 
