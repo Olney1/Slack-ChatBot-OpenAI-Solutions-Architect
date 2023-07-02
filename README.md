@@ -45,9 +45,13 @@ You will also need the following API keys and secrets, which should be stored se
    pip install -r requirements.txt
    ```
 
-5. **Add your context in main.py**
+## Context
 
-The context sets the scope and behaviour of the chatbot by providing essential information about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
+This is where the bot can be customised for any company use case, not just a tech support chatbot.
+
+**Add your context in main.py**
+
+The context sets the scope and behaviour of the chatbot by providing essential information, in this particular instance, about the specific IT set-up of the company. It acts as the initial introduction for the AI to understand the environment in which it operates. The AI uses this context to shape its responses to user queries.
 
 **Key information examples for your own context:**
 
@@ -93,13 +97,65 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
 
    Go to your app settings page on the Slack API site and navigate to 'Event Subscriptions'. Enable events, then paste the ngrok URL in the 'Request URL' box. Append `/slack/events` to the end of this URL.
 
+
 ## Testing
 
-You can send a POST request to the `/slack/events` endpoint with a JSON body representing a Slack event to test the application. The application should respond by posting a message in the designated Slack channel with the tech support response.
+In order to test the application, you need to mimic a real user interaction. This is done by sending a POST request to the `/slack/events` endpoint with a JSON body representing a Slack event. The application should then respond by posting a message in the designated Slack channel with the tech support response.
+
+**Add the Bot to a Private Channel**
+
+First, you need to invite the bot to a private channel in your Slack workspace. You can create a new private channel for testing purposes. To invite the bot to the channel:
+
+1. Go to the channel where you want to add the bot.
+2. Click on the 'Details' icon at the top right.
+3. Click 'More' and then 'Add apps'.
+4. Search for your bot's name and click 'Add'.
+5. The bot should now be a member of the channel.
+
+**Assign Necessary Permissions in the Slack Dashboard**
+
+In order for the bot to function properly, you need to assign necessary permissions via the Slack dashboard. These permissions include the ability to post messages, view channel details, and receive event notifications.
+
+1. Go to your app settings page on the Slack API site.
+2. Navigate to 'OAuth & Permissions'.
+3. Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
+4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include chat:write and groups:history. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
+5. Go to 'Events Subscriptions' and then navigate to 'Subscribe to bot events'. Add the message.groups bot user event.
+
+**Send a POST request**
+
+With the bot set up in your private channel and permissions granted, you can now test the application by sending a POST request to the /slack/events endpoint. You can use tools like Postman to easily send POST requests.
+
+The body of the request should contain a JSON object representing a Slack event. This should mimic the format of the event objects that Slack sends to your bot. You can refer to the Slack API documentation for examples of these event objects.
+
+**For example, a message event might look like this:**
+
+```
+{
+    "token": "YOUR_SLACK_VERIFICATION_TOKEN",
+    "team_id": "T061EG9RZ",
+    "api_app_id": "A0FFV41KK",
+    "event": {
+        "type": "message",
+        "channel": "YOUR_CHANNEL_ID",
+        "user": "YOUR_USER_ID",
+        "text": "Hello, bot!",
+        "ts": "1558977266.000200"
+    },
+    "type": "event_callback",
+    "event_id": "Ev0FFV41KK",
+    "event_time": 1558977266,
+    "authed_users": ["U0FFV41K"]
+}
+```
+
+Remember to replace the placeholders (YOUR_SLACK_VERIFICATION_TOKEN, YOUR_CHANNEL_ID, YOUR_USER_ID) with actual values.
+
+After sending the request, check the private channel in Slack. The bot should respond with a tech support message.
 
 ## Customising the Chatbot
 
-The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group. It does not have to be designed for solving company specific IT issues or replacing an IT support team. The context that the chatbot uses to generate responses can be defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses the Slack messaging platform (in this instance).
+The real power of this application lies in the ability for solutions architects to customise the chatbot based on the specific needs of an organisation or a user group by editing the context variable as detailed above. It does not have to be designed for solving company specific IT issues. The context that the chatbot uses to generate responses can be heavily defined, which allows tailoring the chatbot's responses to address specific problems, handle particular systems or applications, and align with the knowledge base of the target users. This makes it a versatile and powerful tool for automated, context-aware chatbot support in a variety of use cases where a company uses the Slack messaging platform (in this instance).
 
 **For example:**
 
