@@ -125,9 +125,8 @@ In order for the bot to function properly, you need to assign necessary permissi
 
 **Send a POST request**
 
-With the bot set up in your private channel and permissions granted, you can now test the application by sending a POST request to the /slack/events endpoint. You can either do this directly via the Slack channel that the bot is installed in. Or, you can use tools like Postman to easily send POST requests.
+With the bot added to a private channel and the right permissions granted via the Slack dashboard, you can now test the application by sending a POST request to the /slack/events endpoint. You can do this directly via the private Slack channel that the bot is installed in. You may need to reinstall the Slack bot into the workspace if you have added or changed permissions.
 
-The body of the request should contain a JSON object representing a Slack event. This should mimic the format of the event objects that Slack sends to your bot. You can refer to the Slack API documentation for examples of these event objects.
 
 **For example, a message event might look like this:**
 
