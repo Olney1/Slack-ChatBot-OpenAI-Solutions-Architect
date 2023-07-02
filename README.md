@@ -73,7 +73,7 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
    """
 ```
 
-## Running the Application Locally
+## Quickstart - Running the Application Locally
 
 1. **Start FastAPI server**
 
@@ -120,8 +120,8 @@ In order for the bot to function properly, you need to assign necessary permissi
 2. Navigate to 'OAuth & Permissions'.
 3. Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
 4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include `chat:write` and `groups:history`. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
-5. Go to 'Events Subscriptions' and 'Enable Events'. Turn this button on and add your ngrok URL into the input field that says 'Request URL'.
-6. Navigate a little further down to 'Subscribe to bot events'. Add the `message.groups` bot user event. Make sure to save your changes before you leave.
+5. Go to 'Events Subscriptions' and 'Enable Events'. Turn this button on and add your ngrok URL into the input field that says 'Request URL' along with `/slack/events` at the end.
+6. Navigate a little further down to 'Subscribe to bot events'. Add the `message.groups` bot user event. Make sure to save your changes before you leave. It will only save if you have your FastAPI server and ngrok server running on the same port.
 
 **Send a POST request**
 
