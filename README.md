@@ -119,12 +119,13 @@ In order for the bot to function properly, you need to assign necessary permissi
 1. Go to your app settings page on the Slack API site.
 2. Navigate to 'OAuth & Permissions'.
 3. Scroll down to the 'Scopes' section. Here, you will see two categories of scopes: 'Bot Token Scopes' and 'User Token Scopes'.
-4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include chat:write and groups:history. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
-5. Go to 'Events Subscriptions' and then navigate to 'Subscribe to bot events'. Add the message.groups bot user event.
+4. Add necessary scopes to the 'Bot Token Scopes' category. For this application, the necessary scopes include `chat:write` and `groups:history`. Please note that these scopes are necessary for the bot to function properly. The bot must be able to read channel and message history and post messages.
+5. Go to 'Events Subscriptions' and 'Enable Events'. Turn this button on and add your ngrok URL into the input field that says 'Request URL'.
+6. Navigate a little further down to 'Subscribe to bot events'. Add the `message.groups` bot user event. Make sure to save your changes before you leave.
 
 **Send a POST request**
 
-With the bot set up in your private channel and permissions granted, you can now test the application by sending a POST request to the /slack/events endpoint. You can use tools like Postman to easily send POST requests.
+With the bot set up in your private channel and permissions granted, you can now test the application by sending a POST request to the /slack/events endpoint. You can do this directly now via the channel that the bot is installed in. Or, you can use tools like Postman to easily send POST requests.
 
 The body of the request should contain a JSON object representing a Slack event. This should mimic the format of the event objects that Slack sends to your bot. You can refer to the Slack API documentation for examples of these event objects.
 
