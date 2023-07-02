@@ -87,7 +87,7 @@ Please note, it should be self-explanatory that you'll need to replace '***' in 
    In a new terminal window, navigate to the directory where ngrok is installed and start a tunnel on the same port as the FastAPI application (default is 8000).
 
    ```
-   ./ngrok http 8000
+   ngrok http 8000
    ```
 
    Note the https URL ngrok provides. This is the public URL you can use to interact with your local FastAPI application.
